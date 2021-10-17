@@ -143,7 +143,7 @@ VALUE: `application/json`
 * **Delete Task**  
 **`/tasks/:id`** => DELETE endpoint. `id` of a task is obtained while creating or updating a task.
 ## Dependencies
-* [@sendgrid/mail](https://sendgrid.com/)
+* [nodemailer](https://nodemailer.com/about/)
 * [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 * [express](https://www.npmjs.com/package/express)
 * [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
