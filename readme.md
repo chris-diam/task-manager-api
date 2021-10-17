@@ -36,6 +36,7 @@ This is simple API that enables a logged in user to manage list of tasks via HTT
 
 ## Prerequisites
 * [NodeJS](https://nodejs.org/) required  
+* [MongoDB](https://www.mongodb.com) required
 
 
 
