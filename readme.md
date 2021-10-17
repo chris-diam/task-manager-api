@@ -64,36 +64,36 @@ Install all the dependencies by running the following command from the root dire
 `npm run dev`
 ## Test Project 
 `npm run test`
-## Routes
-### Routes for users
+## Endpoints
+### Endpoints for users
 * **Signup User**  
-**`/users`** => POST route. Provide `name` required, `email` required, `password` required in body.  
+**`/users`** => POST endpoint. Provide `name` required, `email` required, `password` required in body.  
 Set **Headers**  
 KEY: `Content-Type`  
 VALUE: `application/json`
 
 * **Login User**  
-**`/users/login`** => POST route. Provide `email` and `password` in body.  
+**`/users/login`** => POST endpoint. Provide `email` and `password` in body.  
 Set **Headers**  
 KEY: `Content-Type`  
 VALUE: `application/json`
 
-For all the following routes, set **Headers**  
+For all the following endpoints, set **Headers**  
 KEY: `Authorization`  
 VALUE: `Bearer token`  
 Replace `token` with the token value obtained after Login or Signup request
 
 * **Logout User**  
-**`/users/logout`** => POST route. Log out from currently logged in session (from current device)
+**`/users/logout`** => POST endpoint. Log out from currently logged in session (from current device)
 
 * **Logout from All**  
-**`/users/logoutAll`** => POST route. Log out from all logged in sessions (from all device)
+**`/users/logoutAll`** => POST endpoint. Log out from all logged in sessions (from all device)
 
 * **Read Profile**  
-**`/users/me`** => GET route.
+**`/users/me`** => GET endpoint.
 
 * **Update User**  
-**`/users/me`** => PATCH route. Set **Headers**  
+**`/users/me`** => PATCH endpoint. Set **Headers**  
 KEY: `Content-Type`  
 VALUE: `application/json`  
 
@@ -106,25 +106,25 @@ VALUE: `application/json`
 
 
 * **Upload Avatar**  
-**`/users/me/avatar`** => POST route. In Postman, set **Body** to _from-data_ with KEY: `avatar` type File and VLAUE: select a image file of size less than 1 MB
+**`/users/me/avatar`** => POST endpoint. In Postman, set **Body** to _from-data_ with KEY: `avatar` type File and VLAUE: select a image file of size less than 1 MB
 * **Delete Avatar**  
-**`/users/me/avatar`** => DELETE route. Deletes avatar picture from the user's account
+**`/users/me/avatar`** => DELETE endpoint. Deletes avatar picture from the user's account
 
 * **Delete User Account**  
-**`/users/me`** => DELETE route. Delete the users account and all the tasks associated with it
+**`/users/me`** => DELETE endpoint. Delete the users account and all the tasks associated with it
 
-### Routes for tasks
+### endpoints for tasks
 * **Create Task**  
-**`/tasks`** => POST route. Provide _String_ `description` (required) and _Boolean_ `completed` (optional).  
+**`/tasks`** => POST endpoint. Provide _String_ `description` (required) and _Boolean_ `completed` (optional).  
 Set **Headers**  
 KEY: `Content-Type`  
 VALUE: `application/json`
 
 * **Read a Task**  
-**`/tasks/:id`** => GET route. `id` of a task is obtained while creating or updating a task  
+**`/tasks/:id`** => GET endpoint. `id` of a task is obtained while creating or updating a task  
 
 * **Read all Tasks**  
-**`/tasks`** => GET route. Simply fetch all task.  
+**`/tasks`** => GET endpoint. Simply fetch all task.  
 
   **Query Parameters**
   * `completed` optional   
@@ -135,13 +135,13 @@ VALUE: `application/json`
   
 
 * **Update Task**  
-**`/tasks/:id`** => PATCH route.  `id` of a task is obtained while creating or updating a task. Provide either or both of the parameters _String_ `description` or _Boolean_ `completed`.  
+**`/tasks/:id`** => PATCH endpoint.  `id` of a task is obtained while creating or updating a task. Provide either or both of the parameters _String_ `description` or _Boolean_ `completed`.  
 Set **Headers**  
 KEY: `Content-Type`  
 VALUE: `application/json`
 
 * **Delete Task**  
-**`/tasks/:id`** => DELETE route. `id` of a task is obtained while creating or updating a task.
+**`/tasks/:id`** => DELETE endpoint. `id` of a task is obtained while creating or updating a task.
 ## Dependencies
 * [@sendgrid/mail](https://sendgrid.com/)
 * [bcryptjs](https://www.npmjs.com/package/bcryptjs)
