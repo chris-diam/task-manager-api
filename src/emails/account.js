@@ -4,8 +4,8 @@ function transporter() {
     return nodemailer.createTransport({
         service: 'yahoo',
         auth:{
-            user: 'christos.diama@yahoo.gr',
-            pass: 'niajsfvnpmvdkyjh'
+            user: process.env.MY_EMAIL,
+            pass: process.env.EMAIL_PASSWORD
         }
     })
 }
@@ -13,7 +13,7 @@ function transporter() {
 function sendWelcomeEmail(email, name){
     const transporterObject = transporter()
     transporterObject.sendMail({
-        from: 'Task Manager API <christos.diama@yahoo.gr>',
+        from: `Task Manager API ${process.env.MY_EMAIL}`,
         to: `${email}`,
         subject:'Thanks!',
         text:`Welcome to our service, ${name}!`,
@@ -24,7 +24,7 @@ function sendWelcomeEmail(email, name){
 function sendDeleteEmail(email,name) {
     const transporterObject = transporter()
     transporterObject.sendMail({
-        from:'Task Manager API <christos.diama@yahoo.gr>',
+        from:`Task Manager API ${process.env.MY_EMAIL}`,
         to:`${email}`,
         subject: 'Goodbye',
         text: `We hope to see you again ${name}.`,

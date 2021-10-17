@@ -14,8 +14,6 @@ router.patch('/tasks/:id', auth, async (req, res) => {
 
     try{
         const task = await Task.findOne({_id: req.params.id, owner: req.user._id})
-        //const task = await Task.findById(req.params.id)
-        
 
         if(!task){
             res.status(400).send()
@@ -63,22 +61,18 @@ router.get('/tasks', auth, async (req, res) => {
 
 
     try{
-        //const tasks = await Task.find({  owner: req.user._id , completed:true})
-        //await req.user.populate('tasks') (alternative) 
-
+        
         await req.user.populate({
             path: 'tasks',
             match,
             options:{
-                  //limit: parseInt(req.query.limit),
-                  //skip: parseInt(req.query.skip),
+                  limit: parseInt(req.query.limit),
+                  skip: parseInt(req.query.skip),
                   sort: {
                       completed: 1
                   }
              }
         })
-        
-        //res.send(tasks) 
          res.send(req.user.tasks)
     }catch(e){
         res.status(500).send()
