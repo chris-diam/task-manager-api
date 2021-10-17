@@ -50,13 +50,14 @@ Install all the dependencies by running the following command from the root dire
 `PORT=3000`    
 `JWT_SECRET=`_YOUR SECRET_  
 `MONGODB_URI=mongodb://127.0.0.1:27017/task-manager-api`
-`MY_EMAIL=` _YOUR EMAIL_
-`EMAIL_PASSWORD=`_YOUR EMAIL PASSWORD OR YOUR EMAIL PROVIDER SECURITY PASSWORD_
+
+   `MY_EMAIL=` _YOUR EMAIL_
+
+    `EMAIL_PASSWORD=`_YOUR EMAIL PASSWORD OR YOUR EMAIL PROVIDER SECURITY PASSWORD_
 
 1. Create a file `test.env` inside `config`  
 1. Paste the following code inside it 
-`PORT=3000`  
-`SENDGRID_API_KEY=`_YOUR KEY_  
+ 
 `JWT_SECRET=`_YOUR SECRET_  
 `MONGODB_URI=mongodb://127.0.0.1:27017/task-manager-api-test` 
 ## Start Project
